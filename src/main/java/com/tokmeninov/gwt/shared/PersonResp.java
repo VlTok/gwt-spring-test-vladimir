@@ -5,12 +5,12 @@ import java.util.Objects;
 
 public class PersonResp implements Serializable {
 
-    private long id;
+    private int id;
     private String name;
     private String surname;
     private String patronymic;
 
-    public PersonResp(long id, String name, String surname, String patronymic) {
+    public PersonResp(int id, String name, String surname, String patronymic) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -24,7 +24,7 @@ public class PersonResp implements Serializable {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

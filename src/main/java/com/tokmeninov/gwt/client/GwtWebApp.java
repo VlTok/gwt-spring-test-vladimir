@@ -31,7 +31,7 @@ public class GwtWebApp implements EntryPoint {
   private final TextBox surnameField = new TextBox();
   private final TextBox patronymicField = new TextBox();
 
-  private long id = -1;
+  private int id = -1;
 
   private ListDataProvider<PersonResp> createTable(CellTable<PersonResp> table){
     TextColumn<PersonResp> nameColumn = new TextColumn<PersonResp>() {
@@ -94,7 +94,7 @@ public class GwtWebApp implements EntryPoint {
         PersonResp personResp = dataProvider.getList().get(table.getKeyboardSelectedRow());
         nameField.setValue(personResp.getName());
         surnameField.setValue(personResp.getSurname());
-        id = personResp.getId();
+        id = (int)personResp.getId();
         dialog.show();
         dialog.center();
       }
