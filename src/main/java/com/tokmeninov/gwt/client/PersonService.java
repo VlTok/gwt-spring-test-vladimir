@@ -6,7 +6,7 @@ import com.tokmeninov.gwt.shared.PersonResp;
 
 import java.util.List;
 
-@RemoteServiceRelativePath("person")
+@RemoteServiceRelativePath("rpc/person")
 public interface PersonService extends RemoteService {
     List<PersonResp> list();
 
