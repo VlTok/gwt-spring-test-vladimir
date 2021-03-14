@@ -4,6 +4,6 @@
   <inherits name='com.tokmeninov.gwt.GwtWebApp' />
 
   <!-- Specify the path to any remote services.                   -->
-  <servlet path="/GwtWebApp/person" class="com.tokmeninov.gwt.server.PersonServiceImpl" />
+  <servlet path="/GwtWebApp/person" class="com.tokmeninov.gwt.server.rpc.PersonServiceImpl" />
 
 </module>
