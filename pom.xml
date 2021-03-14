@@ -36,6 +36,13 @@
             <type>pom</type>
             <scope>import</scope>
           </dependency>
+<!--      <dependency>-->
+<!--        <groupId>com.google.gwt</groupId>-->
+<!--        <artifactId>gwt</artifactId>-->
+<!--        <version>${gwt.version}</version>-->
+<!--        <type>pom</type>-->
+<!--        <scope>import</scope>-->
+<!--      </dependency>-->
     </dependencies>
   </dependencyManagement>
 
@@ -104,7 +111,6 @@
       <artifactId>logback-core</artifactId>
       <version>${version.logback}</version>
     </dependency>
-
     <!--    <dependency>-->
     <!--      <groupId>javax.servlet</groupId>-->
     <!--      <artifactId>javax.servlet-api</artifactId>-->
@@ -142,6 +148,43 @@
           <artifactId>spring-web</artifactId>
           <version>${version.spring}</version>
         </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>javax.servlet</groupId>-->
+<!--      <artifactId>javax.servlet-api</artifactId>-->
+<!--      <version>3.1.0</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.codehaus.jackson</groupId>-->
+<!--      <artifactId>jackson-mapper-asl</artifactId>-->
+<!--      <version>1.9.13</version>-->
+<!--    </dependency>-->
+
+
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-test</artifactId>-->
+<!--      <version>5.3.3</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.security</groupId>-->
+<!--      <artifactId>spring-security-config</artifactId>-->
+<!--      <version>${version.spring}</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.security</groupId>-->
+<!--      <artifactId>spring-security-core</artifactId>-->
+<!--      <version>5.4.2</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework.security</groupId>-->
+<!--      <artifactId>spring-security-web</artifactId>-->
+<!--      <version>5.4.2</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-web</artifactId>-->
+<!--      <version>${version.spring}</version>-->
+<!--    </dependency>-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
@@ -209,6 +252,54 @@
       <artifactId>postgresql</artifactId>
       <version>9.4.1211.jre7</version>
     </dependency>-->
+    <!--<dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>${version.spring-data-jpa}</version>
+    </dependency>-->
+    <!--<dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${version.hibernate}</version>
+    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-jdbc</artifactId>-->
+<!--      <version>5.3.3</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-core</artifactId>-->
+<!--      <version>5.3.3</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.springframework</groupId>-->
+<!--      <artifactId>spring-beans</artifactId>-->
+<!--      <version>5.3.3</version>-->
+<!--    </dependency>-->
+
+<!--    <dependency>-->
+<!--      <groupId>org.slf4j</groupId>-->
+<!--      <artifactId>slf4j-log4j12</artifactId>-->
+<!--      <version>1.7.21</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.postgresql</groupId>-->
+<!--      <artifactId>postgresql</artifactId>-->
+<!--      <version>42.2.19</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>org.mockito</groupId>-->
+<!--      <artifactId>mockito-all</artifactId>-->
+<!--      <version>1.10.19</version>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>junit</groupId>-->
+<!--      <artifactId>junit</artifactId>-->
+<!--      <version>4.11</version>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
   </dependencies>
 
   <build>
