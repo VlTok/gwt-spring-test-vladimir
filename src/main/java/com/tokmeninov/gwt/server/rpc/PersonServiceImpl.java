@@ -1,11 +1,11 @@
-package com.tokmeninov.gwt.server;
+package com.tokmeninov.gwt.server.rpc;
 
 import com.tokmeninov.gwt.client.PersonService;
 import com.tokmeninov.gwt.server.domain.Person;
 import com.tokmeninov.gwt.server.repository.PersonRepository;
-import com.tokmeninov.gwt.server.service.AppContext;
 import com.tokmeninov.gwt.shared.PersonResp;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,15 +13,16 @@ import java.util.List;
 /**
  * The server side implementation of the RPC service.
  */
-public class PersonServiceImpl extends RemoteServiceServlet implements
-        PersonService {
+@SuppressWarnings("GwtServiceNotRegistered")
+public class PersonServiceImpl extends RemoteServiceServlet implements PersonService {
 
-  private final PersonRepository persons = AppContext.getBean(PersonRepository.class);
+  @Autowired
+  private PersonRepository personRepository;
 
   @Override
   public List<PersonResp> list() {
     List<PersonResp> people = new ArrayList<>();
-    for (Person person : persons.findAll()){
+    for (Person person : personRepository.findAll()){
       people.add(new PersonResp(
               (int)person.getId(),
               person.getName(),
@@ -38,14 +39,14 @@ public class PersonServiceImpl extends RemoteServiceServlet implements
     person.setName(data.getName());
     person.setSurname(data.getSurname());
     person.setPatronymic(data.getPatronymic());
-    persons.save(person);
+    personRepository.save(person);
     data.setId((int)person.getId());
     return data;
   }
 
   @Override
   public boolean delete(PersonResp person) {
-    persons.deleteById((int) person.getId());
+    personRepository.deleteById((int) person.getId());
     return true;
   }
 }
